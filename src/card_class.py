@@ -1,9 +1,29 @@
 import random
 from enum import Enum
+from typing import NamedTuple
+
+class Card (object):
+   """A standard playing card"""
+        suites_list=["hearts","clubs","spades","diamonds"]
+        value_dict={
+	  "ace"  : (1,11),
+	  "2"    : 2,
+          "3"    : 3,
+          "4"    : 4,
+          "5"    : 5,
+	  "6"    : 6,
+          "7"    : 7,
+	  "9"    : 9,
+	  "10"   : 10,
+          "Jack" : 10,
+          "Queen": 10,
+          "king" : 10, }
+  def __init__(self, suit=None, rank=None):
+	self.suit=suit
+        self.rank=rank
+
 class Deck ():
     def __init__(self):
-        suites=["hearts","clubs","spades","diamonds"]
-        values=["ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"]
         self.deck_list=[]
         for i in suites:
             for n in values:

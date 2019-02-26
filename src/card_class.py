@@ -24,22 +24,25 @@ class Deck ():
             for n in self.value_dict:
                 self.deck_list.append((i,n))
                 self.count+=1
-        print(self.count)
 
     def get_card(self):
         self.num=random.randrange(0,self.count-1)
-        self.card=self.deck_list[self.num]
-        print("{1} of {0}".format(self.card[0],self.card[1]))
-        self.remove_card(self.card)
+        try:
+            self.card=self.deck_list[self.num]
+            self.remove_card(self.card)
+        except:
+           print("Could not get card.")
         return self.card
 
     def remove_card(self,card):
         try:
             self.deck_list.remove(card)
             self.count-=1
-            print(self.count)
         except ValueError:
             print("Card not found in deck, Could not be removed")
     def display_card(self,card):
         print("{1} of {0}".format(self.card[0], self.card[1]))
 
+test= Deck()
+card=test.get_card()
+test.display_card(card)

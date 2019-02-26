@@ -25,9 +25,6 @@ class Card (object):
 class Deck ():
     def __init__(self):
         self.deck_list=[]
-        for i in suites:
-            for n in values:
-                self.deck_list.append((i,n))
     def get_card(self):
         num=random.randrange(0,51)
         print(self.deck_list[num])

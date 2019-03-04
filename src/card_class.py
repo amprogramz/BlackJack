@@ -1,16 +1,48 @@
 import random
-from enum import Enum
+
 class Deck ():
     def __init__(self):
-        suites=["hearts","clubs","spades","diamonds"]
-        values=["ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"]
-        self.deck_list=[]
-        for i in suites:
-            for n in values:
-                self.deck_list.append((i,n))
-    def get_card(self):
-        num=random.randrange(0,51)
-        print(self.deck_list[num])
+        self.count=0
+        self.suites_list = ["Hearts", "Clubs", "Spades", "Diamonds"]
+        self.value_dict = {
+            "ace":11,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 5,
+            "6": 6,
+            "7": 7,
+            "8": 8,
+            "9": 9,
+            "10": 10,
+            "Jack": 10,
+            "Queen": 10,
+            "king": 10}
 
-test=Deck()
-test.get_card()
+        self.deck_list=[]
+        for i in self.suites_list:
+            for n in self.value_dict:
+                self.deck_list.append((i,n))
+                self.count+=1
+
+    def get_card(self):
+        self.num=random.randrange(0,self.count-1)
+        try:
+            self.card=self.deck_list[self.num]
+            self.remove_card(self.card)
+        except:
+           print("Could not get card.")
+        return self.card
+
+    def remove_card(self,card):
+        try:
+            self.deck_list.remove(card)
+            self.count-=1
+        except ValueError:
+            print("Card not found in deck, Could not be removed")
+    def display_card(self,card):
+        print("{1} of {0}".format(self.card[0], self.card[1]))
+
+test= Deck()
+card=test.get_card()
+test.display_card(card)

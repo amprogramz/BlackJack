@@ -1,74 +1,38 @@
 import random
-
-
-
-class Card():
-    def __init__(self, suit, value, face_value):
-        self.suit = suit
-        self.value = value
-        self.face_value = face_value
-
-
-    def display_card(self):
-        print("{0:>2} of {1}".format(self.face_value, self.suit))
-
+from enum import Enum
+from enum import auto
 
 class Deck ():
-    def __init__(self, num_decks=1):
-        self.deck_count = num_decks
-        self.count=0
-        self.suites_list = ["Hearts", "Clubs", "Spades", "Diamonds"]
-        self.value_dict = {
-            "A":11,
-            "2": 2,
-            "3": 3,
-            "4": 4,
-            "5": 5,
-            "6": 6,
-            "7": 7,
-            "8": 8,
-            "9": 9,
-            "10": 10,
-            "J": 10,
-            "Q": 10,
-            "K": 10}
-
-        self.deck_list=[]
-        for deck in range(num_decks):
-            self.deck_list.extend(self.__get_deck())
-        random.shuffle(self.deck_list)
-
-
-    def __get_deck(self):
-        new_deck = []
-        for i in self.suites_list:
-            for n in self.value_dict:
-                new_deck.append(Card(i,self.value_dict[n],n))
-        random.shuffle(new_deck)
-        return new_deck
-
-
-    def reset_deck(self):
-        self.deck_list=[]
-        for deck in range(self.deck_count):
-            self.deck_list.extend(self.__get_deck())
-        random.shuffle(self.deck_list)
-
-
+    def __init__(self):
+        self.decklist=[]
+        for suit in Card.Suit:
+            for n in Card.Value:
+                self.decklist.append((suit, n))
     def get_card(self):
-        new_card = None
-        try:
-            new_card = self.deck_list.pop()
-        except IndexError:
-            print("Out of Cards!\nCreating A New Deck")
-            self.reset_deck()
-            new_card = self.deck_list.pop()
+        num=random.randrange(0,51)
+        print(self.decklist[num])
 
-        return new_card
+test=Deck()
+test.get_card()
 
-        
+class Card:
+    class Suit(Enum):
+        HEARTS = auto()
+        CLUBS = auto()
+        DIAMONDS = auto()
+        SPADES = auto()
 
-test= Deck()
-for x in range(53):
-    card=test.get_card()
-    card.display_card()
+    class Value(Enum):
+        TWO = 2
+        THREE = 3
+        FOUR = 4
+        FIVE = 5
+        SIX = 6
+        SEVEN = 7
+        EIGHT = 8
+        NINE = 9
+        TEN = 10
+        JACK = 10
+        QUEEN = 10
+        KING = 10
+        ACE = 11

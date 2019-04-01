@@ -5,15 +5,15 @@ Table:
 - Generate player API list
   - table.player#.getPlay()
   
-  
-  Class Player_API()
-  {
-    self.player = (Player_Object)
-    self.bet = 0
-    self.hand = None  
-  }
-  
- Table_list = [player_api_1, player_api_2, ..., player_api_n]
+Class Player_API()
+{
+  self.player = Player_Object
+  self.bet = 0
+  self.hand = None
+  self.PlayerState = None
+}
+
+Table_list = [player_api_1, player_api_2, ..., player_api_n]
  
 Dealer class
   - add timeouts to player response

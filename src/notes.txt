@@ -1,0 +1,25 @@
+Derp
+
+Table:
+- List of player objects passed to table
+- Generate player API list
+  - table.player#.getPlay()
+  
+  
+  Class Player_API()
+  {
+    self.player = (Player_Object)
+    self.bet = 0
+    self.hand = None  
+  }
+  
+ Table_list = [player_api_1, player_api_2, ..., player_api_n]
+ 
+Dealer class
+  - add timeouts to player response
+  
+main file
+  - Init player list (send to table)
+  - Init dealer
+  - Init table(player_list)
+  - Call dealer logic

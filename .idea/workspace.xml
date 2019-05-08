@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="167b9a45-6377-47cb-8a78-e3d95a952fdb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Black Jack GUI.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pickle player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abstract_player.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abstract_player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/card_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/card_class.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Black Jack GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+            <state relative-caret-position="459">
+              <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -125,8 +120,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="width" value="847" />
+    <option name="height" value="1017" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -148,7 +143,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/card_class.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -232,10 +227,18 @@
       <option name="presentableId" value="Default" />
       <updated>1546029467007</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Base GUI functionality and PNG card files (public domain).&#10;In Card Class, renamed 'Q', 'K', 'J' to 'Queen', etc...&#10;Basic syntax cleanup.&#10;There's more work to do as far as GUI implementation, but I think it's &#10;probably best to get the rest of the program running, so I can pull the &#10;values I need and run the program from the UI loop.">
+      <created>1557278813564</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557278813564</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="847" height="1017" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.62009805" />
@@ -243,7 +246,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32932165" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34049773" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -258,7 +261,9 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Added Base GUI functionality and PNG card files (public domain).&#10;In Card Class, renamed 'Q', 'K', 'J' to 'Queen', etc...&#10;Basic syntax cleanup.&#10;There's more work to do as far as GUI implementation, but I think it's &#10;probably best to get the rest of the program running, so I can pull the &#10;values I need and run the program from the UI loop." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Base GUI functionality and PNG card files (public domain).&#10;In Card Class, renamed 'Q', 'K', 'J' to 'Queen', etc...&#10;Basic syntax cleanup.&#10;There's more work to do as far as GUI implementation, but I think it's &#10;probably best to get the rest of the program running, so I can pull the &#10;values I need and run the program from the UI loop." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/baker_player.py">
@@ -335,8 +340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Black Jack GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="18" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        <state relative-caret-position="459">
+          <caret line="27" column="58" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>

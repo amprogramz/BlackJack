@@ -29,7 +29,7 @@ class CardState(Enum):
     UP = True
 
 def main():
-
+    pass
 
 
 if __name__ == “__main__”:

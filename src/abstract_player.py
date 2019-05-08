@@ -27,6 +27,7 @@ import abc
 
 import abc 
 
+
 class Abstract_Player(object):
    __metaclass__ = abc.ABCMeta
 
@@ -37,21 +38,17 @@ class Abstract_Player(object):
       self._player_name = name
       self.__chips = 100         # Private
 
-
    @abc.abstractmethod
    def play(self):
       pass
-
 
    @abc.abstractmethod
    def get_bet(self):
       pass  
 
-
    def get_chip_count(self):
       return self.__chips 
 
-   
    def set_chip_count(self, bet):
       if self.__chips - bet >= 0:
          self.__chips -= bet

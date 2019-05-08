@@ -1,5 +1,6 @@
 import random
 
+
 class Card():
     def __init__(self, suit, value, face_value):
         self.suit = suit
@@ -9,13 +10,14 @@ class Card():
     def display_card(self):
         print("{0:>2} of {1}".format(self.face_value, self.suit))
 
-class Deck ():
+
+class Deck():
     def __init__(self, num_decks=1):
         self.deck_count = num_decks
-        self.count=0
+        self.count = 0
         self.suites_list = ["Hearts", "Clubs", "Spades", "Diamonds"]
         self.value_dict = {
-            "A":11,
+            "Ace": 11,
             "2": 2,
             "3": 3,
             "4": 4,
@@ -25,10 +27,10 @@ class Deck ():
             "8": 8,
             "9": 9,
             "10": 10,
-            "J": 10,
-            "Q": 10,
-            "K": 10}
-        self.deck_list=[]
+            "Jack": 10,
+            "Queen": 10,
+            "King": 10}
+        self.deck_list = []
         for deck in range(num_decks):
             self.deck_list.extend(self.__get_deck())
         random.shuffle(self.deck_list)
@@ -37,12 +39,12 @@ class Deck ():
         new_deck = []
         for i in self.suites_list:
             for n in self.value_dict:
-                new_deck.append(Card(i,self.value_dict[n],n))
+                new_deck.append(Card(i, self.value_dict[n], n))
         random.shuffle(new_deck)
         return new_deck
 
     def reset_deck(self):
-        self.deck_list=[]
+        self.deck_list = []
         for deck in range(self.deck_count):
             self.deck_list.extend(self.__get_deck())
         random.shuffle(self.deck_list)
@@ -57,9 +59,9 @@ class Deck ():
             new_card = self.deck_list.pop()
         return new_card
 
-
-
-test= Deck()
+'''
+#test = Deck()
 for x in range(53):
-    card=test.get_card()
+    card = test.get_card()
     card.display_card()
+'''
